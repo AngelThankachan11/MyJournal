@@ -9,11 +9,11 @@ import android.view.WindowManager;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    private static int Splash_Timer=3000;
+    private final int Splash_Timer=3000;
 
     @Override
 
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         getWindow().setFlags(
@@ -24,7 +24,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashScreenActivity.this , MainActivity.class);
-                startActivity(intent);
+                SplashScreenActivity.this.startActivity(intent);
                 finish();
             }
         }, Splash_Timer);
