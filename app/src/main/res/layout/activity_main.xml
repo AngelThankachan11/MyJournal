@@ -37,6 +37,31 @@
             android:textColor="#FFF1F1"
             android:textSize="30sp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Create New Journal Entry"
+                android:textColor="#FFF1F1"
+                android:textSize="10dp"
+
+                />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="216dp" />
+
+
+
+
+
     </LinearLayout>
 
 </RelativeLayout>
