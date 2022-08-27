@@ -3,12 +3,15 @@ package com.w9556358.myjournal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
-public class AddEntry_Activity extends AppCompatActivity {
+public class AddEntry extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_entry);
+        setContentView(R.layout.activity_addentry);
     }
+
 }
