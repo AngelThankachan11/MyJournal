@@ -3,8 +3,6 @@ package com.w9556358.myjournal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class AddEntry extends AppCompatActivity {
 
@@ -13,5 +11,6 @@ public class AddEntry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addentry);
     }
+
 
 }
