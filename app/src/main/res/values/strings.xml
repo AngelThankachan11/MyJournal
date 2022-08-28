@@ -17,10 +17,5 @@
     <string name="title_activity_maps">MapsActivity</string>
 
     <string name="subject">Subject</string>
-    <string name="demo_text">demo text to be changed</string>
-    <string name="entry">Your Diary Entry</string>
-    <string name="entry1">Write your Entry Heading</string>
-    <string name="submit">Submit </string>
-    <string name="discard">Discard </string>
-
+    <string name="demotext">demo text to be changed</string>
 </resources>
