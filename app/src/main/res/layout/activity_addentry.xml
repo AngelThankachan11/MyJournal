@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_centerInParent="true"
+    android:background="#F7E8D392"
     tools:context=".AddEntry">
 
 
@@ -17,101 +18,92 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:capitalize="sentences"
+            android:layout_marginTop="16dp"
             android:fontFamily="cursive"
             android:includeFontPadding="true"
-            android:text="Your Diary Entry"
+            android:minHeight="48dp"
+            android:text="@string/entry"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <EditText
-            android:id="@+id/heading"
+            android:id="@+id/heading2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="20dp"
-            android:ems="10"
+            android:layout_weight="1"
+            android:ellipsize="none"
+            android:ems="200"
             android:fontFamily="cursive"
+            android:hint="@string/entry1"
             android:inputType="textPersonName"
-            android:text="Heading"
+            android:maxLines="100"
+            android:minHeight="48dp"
+            android:scrollHorizontally="false"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="156dp"
-            android:layout_height="63dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="68dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heading" />
-
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/simpleEditText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="#CCF1ED"
-            app:layout_constraintEnd_toStartOf="@+id/calendarView"
-            app:layout_constraintHorizontal_bias="0.035"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heading" />
+            android:layout_marginTop="20dp"
+            android:ems="200"
+            android:fontFamily="cursive"
+            android:hint="@string/entry2"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:paddingLeft="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/heading2"
+            tools:layout_editor_absoluteX="1dp" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="cursive"
-            android:text="Submit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="@string/submit"
+            app:backgroundTint="@color/button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/simpleEditText" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="100dp"
-            android:fontFamily="cursive"
-            android:text="Cancel"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button5" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="361dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="cursive"
+            android:text="@string/discard"
+            app:backgroundTint="@color/button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mapView">
+            app:layout_constraintTop_toBottomOf="@+id/simpleEditText" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#B6ECE7"
-                android:editable="true"
-                android:fontFamily="cursive"
-                android:hint="Write your notes here"
-                android:inputType="text|textCapSentences|textAutoComplete|textImeMultiLine"
-                android:isScrollContainer="false"
-                android:keepScreenOn="true"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:visibility="visible"
-                tools:visibility="visible" />
-        </com.google.android.material.textfield.TextInputLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_alignParentBottom="true"
+        android:background="#CAB492"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_main">
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 </RelativeLayout>
