@@ -5,9 +5,10 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -19,6 +20,23 @@ public class AddEntry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addentry);
+
+        Button savebtn = findViewById(R.id.button5);
+        savebtn.setOnClickListener(view -> {
+            Intent i1 = new Intent(AddEntry.this, MainActivity.class);
+            startActivity(i1);
+            finish();
+        });
+
+        Button cancelbtn = findViewById(R.id.button6);
+        savebtn.setOnClickListener(view -> {
+            Intent i2 = new Intent(AddEntry.this, MainActivity.class);
+            startActivity(i2);
+            finish();
+        });
+
+
+
         BottomNavigationView.OnNavigationItemSelectedListener selectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -45,5 +63,4 @@ public class AddEntry extends AppCompatActivity {
             }
         };
     }
-
 }
